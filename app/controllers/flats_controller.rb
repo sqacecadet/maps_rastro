@@ -21,6 +21,7 @@ class FlatsController < ApplicationController
   # GET /flats/new
   def new
     @flat = Flat.new
+
   end
 
   # GET /flats/1/edit
@@ -53,6 +54,7 @@ class FlatsController < ApplicationController
   # DELETE /flats/1.json
   def destroy
     @flat.destroy
+
     respond_to do |format|
       format.html { redirect_to flats_url }
       format.json { head :no_content }
@@ -67,6 +69,6 @@ class FlatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flat_params
-      params.require(:flat).permit(:name, :address)
+      params.require(:flat).permit(:name, :address, :picture)
     end
 end

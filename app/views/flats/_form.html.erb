@@ -4,7 +4,7 @@
 
       <h1>Create/Edit your flat</h1>
 
-      <%= form_for(@flat) do |f| %>
+      <%= form_for(@flat, html: { multipart: true }) do |f| %>
         <% if @flat.errors.any? %>
           <div id="error_explanation">
             <h2><%= pluralize(@flat.errors.count, "error") %> prohibited this flat from being saved:</h2>
@@ -27,11 +27,14 @@
           <%= f.text_field :address, class: "form-control" %>
         </div>
 
+        <div class="field">
+          <%= f.file_field :picture %>
+        </div>
+
         <div class="form-group">
           <%= f.submit "GO", class: "btn btn-primary" %>
         </div>
       <% end %>
-
 
     </div>
   </div>

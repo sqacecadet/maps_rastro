@@ -17,7 +17,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: maps_rastro_development
+  database: maps_example_development
   pool: 5
   username: ergoproxy
 
@@ -45,11 +45,11 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: maps_rastro_test
+  database: maps_example_test
   pool: 5
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: maps_rastro_production
+  database: maps_example_production
   pool: 5

@@ -1,5 +1,6 @@
 <div class="map_box">
   <h3><%= flat.name %></h3>
   <p><%= flat.address %></p>
+  <%= image_tag flat.picture.url %>
   <%= link_to "Details", flat_path(flat), target: :blank, class: "btn btn-warning" %>
 </div>

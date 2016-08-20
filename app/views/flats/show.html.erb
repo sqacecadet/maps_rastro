@@ -1,16 +1,16 @@
 <div class="row-fluid">
   <div class="col-md-8 col-md-offset-2">
+
     <div class="row">
       <h2><%= @flat.name %></h2>
       <p><%= @flat.address %></p>
       <p>Latitude: <%= @flat.latitude %></p>
       <p>Longitude: <%= @flat.longitude %></p>
+      <%= image_tag @flat.picture %>
 
       <%= link_to "Edit", edit_flat_path(@flat), class: "btn btn-primary" %>
       <%= link_to "Back", flats_path, class: "btn btn-primary" %>
     </div>
-
-erb
     <hr>
 
     <div class="row">
@@ -20,5 +20,3 @@ erb
   </div>
 
 </div>
-
-
